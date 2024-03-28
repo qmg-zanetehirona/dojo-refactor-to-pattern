@@ -13,7 +13,6 @@ public class EntranceFeeCalculator {
             fee = ADULT_PRICE_BASE * 1.2;
         }
 
-
         if (visitor.getAge() <= 14 && TicketType.HALFDAY == ticketType) {
             fee = CHILD_PRICE_BASE * 0.2;
         } else if (visitor.getAge() <= 14 && TicketType.FULLDAY == ticketType) {

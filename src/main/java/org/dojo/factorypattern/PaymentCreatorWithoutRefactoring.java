@@ -1,7 +1,5 @@
 package org.dojo.factorypattern;
 
-import org.dojo.factorypattern.PaymentType;
-
 public class PaymentCreatorWithoutRefactoring {
 
     public String createPayment(PaymentType paymentType) throws NoSuchFieldException {

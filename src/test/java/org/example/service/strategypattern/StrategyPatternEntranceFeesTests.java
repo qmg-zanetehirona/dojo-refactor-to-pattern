@@ -8,37 +8,37 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StrategyPatternTests {
+public class StrategyPatternEntranceFeesTests {
 
     @Test
-    @DisplayName("Entrance Fees Test")
-    void EntranceFeesTest1() {
+    @DisplayName("Entrance Fees for Children Full Day Test")
+    void EntranceFeesChildFullday() {
         //Given
         double calculateEntranceFees = new EntranceFeeCalculator().calculateEntranceFee(new Visitor(12), TicketType.FULLDAY);
-        assertEquals(50, calculateEntranceFees, 0.01);
+        assertEquals(50, calculateEntranceFees);
     }
 
     @Test
-    @DisplayName("Entrance Fees Test")
-    void EntranceFeesTest2() {
+    @DisplayName("Entrance Fees for Children Half Day Test")
+    void EntranceFeesChildHalfday() {
         //Given
         double calculateEntranceFees = new EntranceFeeCalculator().calculateEntranceFee(new Visitor(6), TicketType.HALFDAY);
-        assertEquals(20, calculateEntranceFees, 0.01);
+        assertEquals(20, calculateEntranceFees);
     }
 
     @Test
-    @DisplayName("Entrance Fees Test")
-    void EntranceFeesTest3() {
+    @DisplayName("Entrance Fees for Adults Full Day Test")
+    void EntranceFeesAdultFullday() {
         //Given
         double calculateEntranceFees = new EntranceFeeCalculator().calculateEntranceFee(new Visitor(26), TicketType.FULLDAY);
-        assertEquals(120, calculateEntranceFees, 0.01);
+        assertEquals(120, calculateEntranceFees);
     }
 
     @Test
-    @DisplayName("Entrance Fees Test")
-    void EntranceFeesTest4() {
+    @DisplayName("Entrance Fees for Adult Half Day Test")
+    void EntranceFeesAdultHalfday() {
         //Given
         double calculateEntranceFees = new EntranceFeeCalculator().calculateEntranceFee(new Visitor(36), TicketType.HALFDAY);
-        assertEquals(60, calculateEntranceFees, 0.01);
+        assertEquals(60, calculateEntranceFees);
     }
 }
